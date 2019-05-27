@@ -26,19 +26,19 @@ public class UserController {
     @GetMapping("/")
     public String home(Model model){
         model.addAttribute("users",userService.findUserBySipmleId(2L));
-//        Post post = new Post("First post");
-//
-//        post.addComment(
-//                new PostComment("My first review")
-//        );
-//        post.addComment(
-//                new PostComment("My second review")
-//        );
-//        post.addComment(
-//                new PostComment("My third review")
-//        );
-//
-//        userService.savePost(post);
+        Post post = new Post("First post");
+
+        post.addComment(
+                new PostComment("My first review")
+        );
+        post.addComment(
+                new PostComment("My second review")
+        );
+        post.addComment(
+                new PostComment("My third review")
+        );
+
+        userService.savePost(post);
 
 
         SportUser sportUser = new SportUser("Nikita");
